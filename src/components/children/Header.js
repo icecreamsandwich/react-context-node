@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import Routes from '../Routes';
-import Myprovider from '../Myprovider';
+/* import Myprovider from '../Myprovider'; */
 
 class Header extends Component {
     render() {
@@ -14,7 +14,7 @@ class Header extends Component {
                     <li><a id="aChat" href="/#chat">Chat</a></li>
                 </ul>  
               <Routes />
-              <Myprovider /> 
+              {/* <Myprovider />  */}
               </div>
         );
     }

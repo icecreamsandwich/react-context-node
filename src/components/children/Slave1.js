@@ -1,13 +1,22 @@
-import React, { Component } from 'react';
+import React from 'react';
+import withColor from './withColor';
 
-class Slave1 extends Component {
-    render() {
-        return (
-            <div>
-                <h2>This is slave 1 call</h2>
-            </div>
-        );
-    }
-}
+const ColoredComponent = props => {
+    return (
+      <div>
+        <h1>Message:</h1>
+        {props.data.msg}
+        {/* <h1>Movie details</h1>
+        <ul>{props.data.map(movies => 
+        <React.Fragment>
+            <li>{movies.title}</li> <br/>
+            <li>{movies.size}</li> <br/>
+            <li>{movies.path}</li> <br/>
+        </React.Fragment> 
+        
+        )}</ul>*/}
+      </div>
+    );
+  };
 
-export default Slave1;
+export default withColor(ColoredComponent);
