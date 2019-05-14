@@ -1,0 +1,17 @@
+nohup: ignoring input
+
+> react-context-node@0.1.0 start /var/www/react-context-node
+> react-scripts start
+
+Starting the development server...
+
+Compiled successfully!
+
+You can now view react-context-node in the browser.
+
+  Local:            http://localhost:3000/
+  On Your Network:  http://192.168.1.107:3000/
+
+Note that the development build is not optimized.
+To create a production build, use yarn build.
+
