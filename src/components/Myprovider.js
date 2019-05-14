@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-//import Person2 from './children/Person2';
 import myContext from './Context';
 import MyConsumer from './MyConsumer';
 
@@ -9,15 +8,36 @@ class Myprovider extends Component {
         class: '4',
         grade: 'A',
         cool: true,
-        person2_grade : 'B'
+        person2_grade : 'B',
+        counter : parseInt(localStorage.getItem("counter")) || 1
     }
+   
     render() {
         return (
             <div>
                 <myContext.Provider value={{
-                    state: this.state
+                    state: this.state,
+                    IncrementCounter: () =>{
+                        this.setState({
+                            counter : this.state.counter+1 
+                        })
+                        var counterInt = parseInt(this.state.counter)
+                        localStorage.setItem("counter",counterInt)
+                    },
+                    ChangePersonGrade : () => {
+                        this.setState({
+                            person2_grade : 'C',
+                        })
+                    },
+                    makeitHot : () =>{
+                        if(this.state.cool === true) var coolBool= false;
+                        else coolBool = true;
+                        this.setState({
+                            cool : coolBool
+                        })  
+                    }
                 }} >
-                    {this.props.children}
+                    {this.props.children}   
                     <MyConsumer />
                 </myContext.Provider>
             </div>

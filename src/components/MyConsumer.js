@@ -11,10 +11,12 @@ class MyConsumer extends Component {
                     {
                         (context) => (
                             <React.Fragment>
-                                <p>Name : {context.state.name}</p>
+                                {/* <p>Name : {context.state.name}</p>
                                 <p>Grade : {context.state.grade}</p>
                                 <p>Class : {context.state.class}</p>
+                                <p>Counter : {context.state.counter}</p> */}
                                 <Person2 value={context}/>
+                                {/* <button onClick={context.IncrementCounter}>Increment Counter</button> */}
                             </React.Fragment>
                         )
                     }
