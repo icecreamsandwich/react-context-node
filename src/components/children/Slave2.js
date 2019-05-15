@@ -35,7 +35,7 @@ class Slave2 extends Component {
   render() {
     var user_details = this.state.details;
     var user_ar = JSON.parse(user_details);
-    console.log(user_ar)
+
     return (
       <div>
         <h2>This is slave2 call</h2>

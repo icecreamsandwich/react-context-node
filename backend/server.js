@@ -59,7 +59,26 @@ app.post('/db/fetch', function (req, res) {
         } else {
             //console.log('Response: Headers:', response && response.headers);
             // console.log(body);
-            //res.send(body);
+            res.send(body);
+            //res.json({success: true, data : body})
+        }
+    });
+})
+
+//api endpoint to node app slav2
+app.post('/db/aggregate', function (req, res) {
+    var host = 'http://localhost:5003';
+    var options = {
+        method: 'POST',
+        uri: host + '/db/aggregate',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    };
+    request(options, function (error, response, body) {
+        if (error) {
+            console.error('error:', error);
+        } else {
             res.json({success: true, data : body})
         }
     });
