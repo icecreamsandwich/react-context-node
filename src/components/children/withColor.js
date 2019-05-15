@@ -1,4 +1,5 @@
 import React from 'react';
+/* import axios from 'axios'; */
 const withColor = (BaseComponent) => {
   class EnhancedComponent extends React.Component {
     state = {

@@ -37,7 +37,7 @@ app.post('/api', function (req, res) {
             console.log(err)
         }
         else {
-            console.log('Response Headers :' + response && response.headers);
+            //console.log('Response Headers :' + response && response.headers);
             res.send(body)
         }
     })
@@ -57,7 +57,7 @@ app.post('/db/fetch', function (req, res) {
         if (error) {
             console.error('error:', error);
         } else {
-            console.log('Response: Headers:', response && response.headers);
+            //console.log('Response: Headers:', response && response.headers);
             // console.log(body);
             //res.send(body);
             res.json({success: true, data : body})
