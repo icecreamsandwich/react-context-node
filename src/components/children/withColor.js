@@ -1,6 +1,4 @@
 import React from 'react';
-//import axios from 'axios';
-
 const withColor = (BaseComponent) => {
   class EnhancedComponent extends React.Component {
     state = {
@@ -8,24 +6,7 @@ const withColor = (BaseComponent) => {
     };
 
     componentDidMount() {
-        /* axios.post("http://192.168.1.107:5001/api")
-        .then(res => {
-            this.setState({
-                data : res
-            })
-        }) */
-       /*  axios({
-            method: 'post',
-            url : "http://192.168.1.107:5001/api",
-            headers: {'Content-type': 'application/json'}
-        })
-        .then(res => {
-            this.setState({
-                data : res
-            })
-        }) */
-      
-      fetch("http://demo8447875.mockable.io/",{ 
+      fetch("https://api-mock.free.beeceptor.com/status",{ 
             method : "POST",
              headers : {
                 'Content-type' : 'application/json',
