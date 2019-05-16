@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import withColor from './withColor';
+import Loader from './Loader';
 
 class Slave2 extends Component {
   state = {
@@ -25,7 +25,7 @@ class Slave2 extends Component {
 
     return (
       <React.Fragment>
-       <h2>This is slave2 call</h2>
+       <h2>Slave2 call</h2>
         <div className="result">
           <label>
             {user_details}
@@ -36,4 +36,4 @@ class Slave2 extends Component {
   }
 }
 
-export default withColor(Slave2);
+export default Loader(Slave2);

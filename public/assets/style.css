@@ -67,15 +67,19 @@ ul {
   }
   .left-nav{
     float: left;
-    width: 200px;
+    width: 13%;
     background-color: darkgrey;
     height: 600px;
   }
   .right-nav{
-    float: right;
-    width: 200px;
+    float: left;
+    width: 13%;
     background-color: darkgrey;
     height: 600px;
+  }
+  .content{
+    float: left;
+    width:74%
   }
   .footer{
     position: fixed;
@@ -83,3 +87,4 @@ ul {
     background-color: sandybrown;
     bottom :0;
   }
+  

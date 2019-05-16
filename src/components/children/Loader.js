@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-const withColor = (BaseComponent) => {
+const Loader = (BaseComponent) => {
   class EnhancedComponent extends React.Component {
     state = {
       data: null,
@@ -34,4 +34,4 @@ const withColor = (BaseComponent) => {
   return EnhancedComponent;
 };
 
-export default withColor;
+export default Loader;

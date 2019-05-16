@@ -9,7 +9,7 @@ import Chat from './children/Chat';
 class Routes extends Component {
     render() {
         return (
-            <div>
+            <div className="content">
                 <HashRouter>
                     <Route exact path="/" component={Home} />
                     <Route path="/home" component={Home} />

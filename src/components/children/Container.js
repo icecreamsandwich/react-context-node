@@ -11,10 +11,11 @@ class Container extends Component {
             <div>
                 <Header />
                 <LeftNav />
+                <Routes />
                 <RightNav />
                 <Footer />
 
-                <Routes />
+                
             </div>
         );
     }

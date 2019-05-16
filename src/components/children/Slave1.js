@@ -1,5 +1,5 @@
 import React from 'react';
-import withColor from './withColor';
+import Loader from './Loader';
 
 const ColoredComponent = props => {
     return (
@@ -16,4 +16,4 @@ const ColoredComponent = props => {
     );
   };
 
-export default withColor(ColoredComponent);
+export default Loader(ColoredComponent);

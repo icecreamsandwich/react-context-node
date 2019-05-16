@@ -16,7 +16,7 @@ class Person2 extends Component {
                 and {context_ar.state.name} is <strong> {cool}</strong> <br/>
                 </React.Fragment>
                 
-                <button onClick={context_ar.makeitHot}>Make it Other</button> <br/> <br/>   
+                <button onClick={context_ar.makeitHot}>Make it {cool}</button> <br/> <br/>   
                 <button onClick={context_ar.IncrementCounter}>Increment Counter</button>
                 {/* <button onClick={context_ar.ChangePersonGrade}>Change Person Grade</button> */}
             </div> 
