@@ -87,4 +87,7 @@ ul {
     background-color: sandybrown;
     bottom :0;
   }
-  
+  .error{
+    display: block;
+    background-color: tomato;
+  }

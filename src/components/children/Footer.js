@@ -6,10 +6,11 @@ class Footer extends Component {
         var copyright = copyrightStr.toLowerCase();
         return (
             <div className="footer">
-                <h5>Muneeb Mukhtar</h5>
+                <h5>Muneeb Mukhtar</h5>               
+                <label style={{float:'right'}}>Powered by Piserve @2019</label><br/>
                 <label style={{float:'left'}}>{copyright}</label>
-                <label style={{float:'right'}}>Powered by Piserve @2019</label>
-            </div>
+                <label style={{float:'right'}}>React : <strong>{React.version}</strong></label>
+                </div>
         );
     }
 }

@@ -4,18 +4,22 @@ import LeftNav from './LeftNav';
 import RightNav from './RightNav';
 import Footer from './Footer';
 import Routes from '../Routes';
+import ErroCatcher from '../ErrorCatcher';
 
 class Container extends Component {
     render() {
         return (
             <div>
+
                 <Header />
                 <LeftNav />
-                <Routes />
+                <ErroCatcher>
+                    <Routes />
+                </ErroCatcher>
                 <RightNav />
                 <Footer />
 
-                
+
             </div>
         );
     }
