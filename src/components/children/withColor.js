@@ -8,22 +8,10 @@ const withColor = (BaseComponent) => {
     };
 
     componentDidMount() {
-      /* fetch("https://api-mock.free.beeceptor.com/status",{ 
-            method : "POST",
-             headers : {
-                'Content-type' : 'application/json',
-                'Access-Control-Allow-Origin' : '*'
-            } 
-        })
-        .then(res => res.json())
-        .then(data => {
-            console.log(data);
-          this.setState({ data });
-        }); */
         //call the api endpoint
-      axios.post("http://localhost:3002/api")
+      var host = "http://192.168.1.107:3002"; //||"http://localhost:3002"
+      axios.post(host+"/api")
       .then((res) =>{
-        //  console.log(JSON.stringify(res.data));
           this.setState({
             data :JSON.stringify(res.data)
         })

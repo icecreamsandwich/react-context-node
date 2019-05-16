@@ -11,6 +11,7 @@ class Routes extends Component {
         return (
             <div>
                 <HashRouter>
+                    <Route exact path="/" component={Home} />
                     <Route path="/home" component={Home} />
                     <Route path="/slave1" component={Slave1} />
                     <Route path="/slave2" component={Slave2} />

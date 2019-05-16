@@ -1,8 +1,7 @@
 #kill the node port used by the server
-kill -9 $(lsof -t -i:3000)
-kill -9 $(lsof -t -i:3002)
+killall -9 /usr/bin/node
 
 #start the react app
 nohup npm start >> app.log 2>&1 &
 #start the server
-cd backend ; nohup npm start >> app.log 2>&1 &
+cd backend; nohup node server.js >> app.log 2>&1 &

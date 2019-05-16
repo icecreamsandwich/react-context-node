@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Routes from '../Routes';
+/* import Routes from '../Routes'; */
 /* import Myprovider from '../Myprovider'; */
 
 class Header extends Component {
@@ -12,7 +12,7 @@ class Header extends Component {
                     <li><a id="aSlave2" href="#slave2">Slave2 Call</a></li>
                     <li><a id="aChat" href="/#chat">Chat</a></li>
                 </ul>  
-              <Routes />
+              {/* <Routes /> */}
               {/* <Myprovider />  */}
               </div>
         );
