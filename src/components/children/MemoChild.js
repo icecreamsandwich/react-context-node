@@ -4,6 +4,7 @@ const MemoChild = props => {
     return (
         <div>
             <label>And am rendering every {props.seconds} seconds</label>
+        
         </div>
     );
 };

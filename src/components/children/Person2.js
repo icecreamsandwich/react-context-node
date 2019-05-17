@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Portal from '../Portal';
+
 class Person2 extends Component {
 
     render() {
@@ -17,7 +19,9 @@ class Person2 extends Component {
                 </React.Fragment>
                 <button onClick={context_ar.makeitHot}>Make it {context_ar.state.cool ? hot_cool_ar[0] : hot_cool_ar[1]}</button> <br /> <br />
                 <button onClick={context_ar.IncrementCounter}>Increment Counter</button>
-                
+                <Portal>
+                    <h4>I am running inside a portal</h4>
+                </Portal>
             </div>
         );
     }

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Loader from './Loader';
+import Portal from '../Portal';
 
 class Slave2 extends Component {
   state = {
@@ -31,6 +32,9 @@ class Slave2 extends Component {
             {user_details}
           </label>
         </div>
+        <Portal>
+          <h2>Portal</h2>
+      </Portal>
       </React.Fragment>
     );
   }

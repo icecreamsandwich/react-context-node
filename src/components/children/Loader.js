@@ -27,7 +27,7 @@ const Loader = (BaseComponent) => {
         return <div>Loading ...</div>;
       }
 
-      return <BaseComponent data={details_ar} {...this.props} />;
+      return <BaseComponent data={details_ar}  />;
     }
   }
 

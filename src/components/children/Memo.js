@@ -1,5 +1,5 @@
 import React,{Component } from 'react';
-import MemoChild from './MemoChild';
+/* import MemoChild from './MemoChild'; */
 import { setInterval } from 'timers';
 
 class Memo extends Component {
@@ -21,6 +21,6 @@ class Memo extends Component {
                 {/* <MemoChild seconds={this.state.seconds} /> */}
             </div>
         );
-    }
+    }   
 }
 export default Memo;
