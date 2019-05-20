@@ -91,3 +91,25 @@ ul {
     display: block;
     background-color: tomato;
   }
+  .table{
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .table th{
+    padding : 12px 0px 12px 0px;
+    text-align: center;
+    color: white;
+    background-color: #4CAF50;
+    border:1px solid #ddd;
+  }
+  .table td{
+    padding: 8px;
+    text-align: left;
+    border:1px solid #ddd;
+  }
+  .table tr:hover{
+    background-color: #ddd;
+  }
+  .table tr:nth-child(even){
+    background-color: #f2f2f2
+  }
