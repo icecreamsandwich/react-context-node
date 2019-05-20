@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Loader from './Loader';
-import Portal from '../Portal';
+/* import Portal from '../Portal'; */
 
 class Slave2 extends Component {
   state = {
@@ -26,22 +26,22 @@ class Slave2 extends Component {
     var user_details = this.state.details;
     console.log(user_details);
     console.log(Object.prototype.toString.call(user_details));
-    if (user_details) {
-      var items = user_details.map((item, key) => {
-        return <React.Fragment>
-          <tr>
-          <td>{item._id}</td>
-          <td>{item.name}</td>
-          <td>{item.address}</td>
-          </tr>
-        </React.Fragment>
-      });
-    }
-    else items = "";
+    //iterate in render method
+    /*  if (user_details) {
+       var items = user_details.map((item, key) => {
+         return <React.Fragment>
+           <tr>
+           <td>{item._id}</td>
+           <td>{item.name}</td>
+           <td>{item.address}</td>
+           </tr>
+         </React.Fragment>
+       });
+     }
+     else items = ""; */
     return (
       <React.Fragment>
         <h2>Slave2 call</h2>
-      
         <table className="table">
           <thead>
             <tr>
@@ -50,8 +50,18 @@ class Slave2 extends Component {
               <th>address</th>
             </tr>
           </thead>
-          <tbody>        
-              {items}          
+          <tbody>
+            <React.Fragment>
+              {/* Iterate in JSX */}
+              {user_details ? user_details.map((items) => {
+                return( <tr>
+                  <td>{items._id}</td>
+                  <td>{items.name}</td>
+                  <td>{items.address}</td>
+                </tr>)   
+              }) : ""}
+            </React.Fragment>
+            {/*   {items} */}
           </tbody>
         </table>
       </React.Fragment>
