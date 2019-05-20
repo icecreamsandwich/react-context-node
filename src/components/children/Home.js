@@ -1,9 +1,10 @@
-import React, { Component, unstable_profiler as Profiler} from 'react';
+import React, { Component} from 'react';
 import ReactDOM from 'react-dom';
-  
+/* import {unstable_profiler as Profiler} from 'react'; */
+
 /* import ErroCatcher from '../ErrorCatcher'; */
 /* import PropTypes from 'prop-types'; */
-import Portal from '../Portal';
+/* import Portal from '../Portal'; */
 
 class Home extends Component {
     constructor(props) {
@@ -41,14 +42,21 @@ class Home extends Component {
       } */
 
       render() {
-        if(this.state.value.length > 10) {
+        /* if(this.state.value.length > 10) {
           throw new Error('You cannot enter more than ten characters!');
         }
         if(this.state.cool) var  cool ="cool" 
-        else cool = "hot";
+        else cool = "hot"; */
 
         return (
-            <div> <h2>Home page</h2></div>         
+            <div> 
+            <h2>Home page</h2>
+            {/* <Profiler id="app" onRender={this.logProfile}>
+                <button onClick={this.go("up")}>☝️</button>
+                <div>The count is {this.state.count}</div>
+                <button onClick={this.go("down")}>👇</button>
+            </Profiler> */}
+            </div>         
         ); 
       }
 }
@@ -71,8 +79,4 @@ export default App;
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
- {/* <Profiler id="app" onRender={this.logProfile}>
-                <button onClick={this.go("up")}>☝️</button>
-                <div>The count is {this.state.count}</div>
-                <button onClick={this.go("down")}>👇</button>
-            </Profiler> */}
+ 
