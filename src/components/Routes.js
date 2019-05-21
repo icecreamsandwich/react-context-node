@@ -6,6 +6,8 @@ import Home from './children/Home';
 import Slave1 from './children/Slave1';
 import Slave2 from './children/Slave2';
 import Chat from './children/Chat';
+import UserDetails from './children/UserDetails';
+
 class Routes extends Component {
     render() {
         return (
@@ -16,6 +18,7 @@ class Routes extends Component {
                     <Route path="/slave1" component={Slave1} />
                     <Route path="/slave2" component={Slave2} />
                     <Route path="/chat" component={Chat} />
+                    <Route path="/userdetails" component={UserDetails} />
                 </HashRouter>
             </div>
         );

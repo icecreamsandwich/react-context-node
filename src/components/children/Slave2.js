@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Loader from './Loader';
 /* import Portal from '../Portal'; */
+import {Link} from 'react-router-dom';
 
 class Slave2 extends Component {
   state = {
@@ -10,12 +11,10 @@ class Slave2 extends Component {
 
   componentDidMount() {
     //call the api endpoint
-    var host = "http://localhost:3002";
+    var host = "http://192.168.1.107:3002";
     axios.post(host + "/db/fetch")
       .then((res) => {
-        // console.log(JSON.sthingify(res.data));
         var user_ar = JSON.parse(JSON.stringify(res.data));
-        // console.log(user_ar);
         this.setState({
           details: user_ar
         })
@@ -24,8 +23,8 @@ class Slave2 extends Component {
   }
   render() {
     var user_details = this.state.details;
-    console.log(user_details);
-    console.log(Object.prototype.toString.call(user_details));
+   /*  console.log(user_details);
+    console.log(Object.prototype.toString.call(user_details)); */
     //iterate in render method
     /*  if (user_details) {
        var items = user_details.map((item, key) => {
@@ -38,7 +37,9 @@ class Slave2 extends Component {
          </React.Fragment>
        });
      }
-     else items = ""; */
+     else items = ""; 
+     // Iterate in JSX 
+       {items} */
     return (
       <React.Fragment>
         <h2>Slave2 call</h2>
@@ -46,22 +47,33 @@ class Slave2 extends Component {
           <thead>
             <tr>
               <th>id</th>
-              <th>name</th>
-              <th>address</th>
+              <th>first_name</th>
+              <th>last_name</th>
+              <th>email</th>
+              <th>gender</th>
+              <th>ip_address</th>
             </tr>
           </thead>
-          <tbody>
-            <React.Fragment>
-              {/* Iterate in JSX */}
+            <tbody>
+            <React.Fragment>             
               {user_details ? user_details.map((items) => {
-                return( <tr>
-                  <td>{items._id}</td>
-                  <td>{items.name}</td>
-                  <td>{items.address}</td>
+                return(<tr key={items.id}>
+                  <td>
+                  <Link to={{
+                    pathname:'/userdetails',
+                    state :{
+                      user_id : items._id
+                    }
+                  }}>{items._id} </Link>
+                  </td>
+                  <td>{items.first_name}</td>
+                  <td>{items.last_name}</td>
+                  <td>{items.email}</td>
+                  <td>{items.gender}</td>
+                  <td>{items.ip_address}</td>
                 </tr>)   
               }) : ""}
             </React.Fragment>
-            {/*   {items} */}
           </tbody>
         </table>
       </React.Fragment>

@@ -79,7 +79,8 @@ app.post('/db/aggregate', function (req, res) {
         if (error) {
             console.error('error:', error);
         } else {
-            res.json({success: true, data : body})
+            //res.json({success: true, data : body})
+            res.send(body)
         }
     });
 })
