@@ -11,7 +11,7 @@ class Slave2 extends Component {
 
   componentDidMount() {
     //call the api endpoint
-    var host = "http://192.168.1.107:3002";
+    var host = "http://localhost:3002";//"http://192.168.1.107:3002";
     axios.post(host + "/db/fetch")
       .then((res) => {
         var user_ar = JSON.parse(JSON.stringify(res.data));
@@ -62,7 +62,12 @@ class Slave2 extends Component {
                   <Link to={{
                     pathname:'/userdetails',
                     state :{
-                      user_id : items._id
+                      user_id : items._id,
+                      first_name : items.first_name,
+                      last_name : items.first_name,
+                      email : items.email,
+                      gender : items.gender,
+                      ip_address : items.ip_address,
                     }
                   }}>{items._id} </Link>
                   </td>
