@@ -7,7 +7,11 @@ class DynoAddRemove extends Component {
     }
 
     handlechange(e, index) {
-        this.state.countries[index] = e.target.value;
+        var currSate = [...this.state.countries];
+        currSate[index] = e.target.value;
+        this.setState({
+            countries : currSate
+        });
     }
     addCountries(e) {
         this.setState({
