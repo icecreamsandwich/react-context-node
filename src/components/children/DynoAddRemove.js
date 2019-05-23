@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-
-
 class DynoAddRemove extends Component {
     state = {
         countries: [],
@@ -19,8 +17,10 @@ class DynoAddRemove extends Component {
         });
     }
     removeCountries(index) {
+        console.log(this.state.countries)
         //remove item from the array
         this.state.countries.splice(index, 1);
+        console.log(this.state.countries)
         //update the state
         this.setState({
             countries: this.state.countries
@@ -28,25 +28,22 @@ class DynoAddRemove extends Component {
     }
     handleSubmit(e) {
         //Submit handler
-        //alert('submit Handler')
         console.log(this.state.countries)
     }
     render() {
-        console.log(this.state.countries, "$$$$")
+       // console.log(this.state.countries, "$$$$")
         return (
             <div>
                 <h2>The Form</h2>
                 <React.Fragment>
                 {this.state.countries.map((item, index) => {
-                    return (
-                        
+                    return (                        
                             <div key={index}>
                                 <label>Country Name</label>
-                                <input onChange={(e) => this.handlechange(e, index)}/>
+                                <input onChange={(e) => this.handlechange(e, index)} value={item} />
                                 <button onClick={() => this.removeCountries(index)}>Remove country</button>
                                 <br /><br />
-                            </div>
-                        
+                            </div>                       
                     );
                 })}
                 </React.Fragment>
