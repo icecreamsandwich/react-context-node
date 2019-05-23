@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 class Header extends Component {
     render() {
         return (
-            <div>
+            <div className="Header">
                  <ul>
                     <li><a id="home" className="active" href="/#home">Master</a></li>
                     <li><a id="aSlave" href="/#slave1">Slave1 Call</a></li>
