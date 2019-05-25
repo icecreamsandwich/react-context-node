@@ -8,7 +8,8 @@ class Header extends Component {
                     <li><a id="aSlave" href="/#slave1">Slave1 Call</a></li>
                     <li><a id="aSlave2" href="#slave2">Slave2 Call</a></li>
                     <li><a id="aChat" href="/#chat">Blah</a></li>
-                    <li><a id="aChat" href="/#dyno">Dyno</a></li>
+                    <li><a id="aDyno" href="/#dyno">Dyno</a></li>
+                    <li><a id="aChart" href="/#chart">Chart</a></li>
                 </ul>  
               </div>
         );
