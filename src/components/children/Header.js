@@ -10,6 +10,7 @@ class Header extends Component {
                     <li><a id="aChat" href="/#chat">Blah</a></li>
                     <li><a id="aDyno" href="/#dyno">Dyno</a></li>
                     <li><a id="aChart" href="/#chart">Chart</a></li>
+                    <li><a id="aChart" href="/#highchart">HighChart</a></li>
                 </ul>  
               </div>
         );

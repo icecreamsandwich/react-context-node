@@ -9,6 +9,8 @@ import Chat from './children/Chat';
 import UserDetails from './children/UserDetails';
 import DynoAddRemove from './children/DynoAddRemove';
 import Chart from './children/Chart';
+import Highchart from './children/Highchart';
+
 class Routes extends Component {
     render() {
         return (
@@ -22,6 +24,7 @@ class Routes extends Component {
                     <Route path="/userdetails" component={UserDetails} />
                     <Route path="/dyno" component={DynoAddRemove} />
                     <Route path="/chart" component={Chart} />
+                    <Route path="/highchart" component={Highchart} />
                 </HashRouter>
             </div>
         );
