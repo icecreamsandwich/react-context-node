@@ -9,6 +9,7 @@ class Header extends Component {
                     <li><a id="aSlave2" href="#slave2">Slave2 Call</a></li>
                     <li><a id="aChat" href="/#chat">Blah</a></li>
                     <li><a id="aChat" href="/#dyno">Dyno</a></li>
+                    <li><a id="aHooks" href="/#hooks">Hooks</a></li>
                 </ul>  
               </div>
         );

@@ -8,6 +8,8 @@ import Slave2 from './children/Slave2';
 import Chat from './children/Chat';
 import UserDetails from './children/UserDetails';
 import DynoAddRemove from './children/DynoAddRemove';
+import Hooks from './children/Hooks';
+
 class Routes extends Component {
     render() {
         return (
@@ -20,6 +22,7 @@ class Routes extends Component {
                     <Route path="/chat" component={Chat} />
                     <Route path="/userdetails" component={UserDetails} />
                     <Route path="/dyno" component={DynoAddRemove} />
+                    <Route path="/hooks" component={Hooks} />
                 </HashRouter>
             </div>
         );
