@@ -134,3 +134,6 @@ ul {
     cursor: pointer;
     border:none;
   }
+  .recharts-tooltip-wrapper{
+    position: relative !important;
+  }

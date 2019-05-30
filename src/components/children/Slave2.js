@@ -11,7 +11,7 @@ class Slave2 extends Component {
 
   componentDidMount() {
     //call the api endpoint
-    var host = "http://localhost:3002";//"http://192.168.1.107:3002";
+    var host = "http://192.168.1.107:3002";//"http://localhost:3002";
     axios.post(host + "/db/fetch")
       .then((res) => {
         var user_ar = JSON.parse(JSON.stringify(res.data));
