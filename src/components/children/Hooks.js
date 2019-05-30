@@ -1,33 +1,48 @@
 import React, { useState, useEffect } from 'react';
 
-const udpateHookState = () =>{
-    alert("udpate hook state called")
-}
+
 const useFetch = (id) => {
     const [data, updateHook] = useState("");
     //make some ajax calls and set the value for result
     useEffect(() => {
-        fetch("https://jsonplaceholder.typicode.com/todos/"+id)
+        fetch("https://jsonplaceholder.typicode.com/todos/" + id)
             .then(res => res.json())
             .then((result) => {
                 updateHook(result);
                 console.log(JSON.stringify(result))
             })
             .catch(err => console.log(err))
-    },[])
+    }, [])
     return data;
     // alert("came here") 
 }
 
-const Hooks = ()=>{
+const Hooks = () => {
     //const url = "nothing";
     var result = useFetch(1);
-    
+    var scoppy = "";
+    function udpateHookState(id) {
+        fetch("https://jsonplaceholder.typicode.com/todos/" + id)
+            .then(res => res.json())
+            .then((result2) => {
+                scoppy = JSON.stringify(result2);
+
+                console.log(scoppy)
+            })
+            .catch(err => console.log(err))
+    }
+    /* const udpateHookState = () =>{
+        alert("udpate hook state called")
+        var result = useFetch(3)
+    } */
     return (
         <div>
             {JSON.stringify(result)}
-            <br/>
-            <button onClick={(e) => udpateHookState(e)}>Update the hook state</button>
+            <br />
+            <button onClick={(e) => udpateHookState(2)}>Update the hook state</button>
+            <div style={{ backgroundColor: 'green' }}>
+                {scoppy}
+            </div>
         </div>
     )
 }
@@ -47,9 +62,9 @@ export default Hooks;
     /* this.setState({
         name : "muneeb",
         age : 20
-    }); 
+    });
 
-    
+
     return (
         <div>
             <h2>Hooks</h2>
