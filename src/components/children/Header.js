@@ -44,6 +44,11 @@ class Header extends Component {
               HighChart
             </a>
           </li>
+          <li>
+            <a id="aDTable" href="/#datatable">
+              DTable
+            </a>
+          </li>
         </ul>
       </div>
     );

@@ -11,6 +11,7 @@ import DynoAddRemove from './children/DynoAddRemove';
 import Hooks from './children/Hooks';
 import Chart from './children/Chart';
 import Highchart from './children/Highchart';
+import Datatable from './children/DataTable';
 
 class Routes extends Component {
   render() {
@@ -27,6 +28,7 @@ class Routes extends Component {
           <Route path="/hooks" component={Hooks} />
           <Route path="/chart" component={Chart} />
           <Route path="/highchart" component={Highchart} />
+          <Route path="/datatable" component={Datatable} />
         </HashRouter>
       </div>
     );

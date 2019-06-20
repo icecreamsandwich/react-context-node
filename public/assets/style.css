@@ -91,29 +91,29 @@ ul {
     display: block;
     background-color: tomato;
   }
-  .table{
+  .table_s{
     width: 100%;
     border-collapse: collapse;
   }
-  .table th{
+  .table_s th{
     padding : 12px 0px 12px 0px;
     text-align: center;
     color: white;
     background-color: #4CAF50;
     border:1px solid #ddd;
   }
-  .table td{
+  .table_s td{
     padding: 8px;
     text-align: left;
     border:1px solid #ddd;
   }
-  .table tr:hover{
+  .table_s tr:hover{
     background-color: #ddd;
   }
-  .table tr:nth-child(even){
+  .table_s tr:nth-child(even){
     background-color: #f2f2f2
   }
-  .form table{
+  .form table_s{
     height: 300px;
     padding : 20px;
   }
