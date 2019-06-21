@@ -10,9 +10,9 @@ export default class DataTable extends Component {
         external_tasks : ""
     }
     componentDidMount() {
-        var host = "http://192.168.1.104:8080";
-        axios
-        .get(host + '/engine-rest/external-task')
+        var host = 'http://192.168.1.107:3535';
+      axios
+        .post(host + '/camunda/pollExternalTasks')
         .then(res => {
           var external_tasks = JSON.parse(JSON.stringify(res.data));
           console.log(external_tasks)
@@ -25,17 +25,23 @@ export default class DataTable extends Component {
     
     render() {
         if(this.state.external_tasks){
+            var rows = [];
             this.state.external_tasks.map(items =>{
-                var rows = [
+                 /* rows = [
                     {
-                        name: 'Tatyana Fitzpatrick',
-                        position: 'Regional Director',
-                        office: 'London',
-                        age: '19',
-                        date: '2010/03/17',
-                        salary: '$385'
+                        activityId: items.activityId,
+                        executionId: items.executionId,
+                        processDefinitionId: items.processDefinitionId,
+                        processInstanceId: items.processInstanceId
                     }
                 ]
+                return rows; */
+                rows.push({
+                    activityId: items.activityId,
+                    executionId: items.executionId,
+                    processDefinitionId: items.processDefinitionId,
+                    processInstanceId: items.processInstanceId
+                })
                 return rows;
             })
             var data = {
@@ -65,9 +71,10 @@ export default class DataTable extends Component {
                         width: 150 
                     },
                 ],
-                
+                rows : rows
             }
         }
+        console.log(data);
         /* const data = {
             columns: [
                 {
